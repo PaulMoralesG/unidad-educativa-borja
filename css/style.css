@@ -8,6 +8,54 @@
     --bg-soft-light: #F5F7FA;
 }
 
+/* ============================================
+   TIPOGRAFÍA MODERNA - POPPINS + ROBOTO
+   ============================================ */
+
+/* Fuente base para todo el cuerpo del texto */
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Fuente para títulos y encabezados */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* Títulos con énfasis extra */
+.fw-bold, .fw-semibold {
+    font-weight: 700;
+}
+
+/* Navbar y menús */
+.navbar,
+.nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+/* Botones */
+.btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* Breadcrumbs y elementos de navegación */
+.breadcrumb-item {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ============================================
+   FIN TIPOGRAFÍA
+   ============================================ */
+
 /* Prevenir scroll horizontal en móviles */
 html {
     overflow-x: hidden;
