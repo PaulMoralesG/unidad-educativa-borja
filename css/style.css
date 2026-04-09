@@ -11,10 +11,63 @@
 /* Prevenir scroll horizontal en móviles */
 html {
     overflow-x: hidden;
+    width: 100%;
 }
 
 body {
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* Asegurar que todas las imágenes sean responsive por defecto */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Contenedores principales */
+.container,
+.container-fluid {
+    overflow-x: hidden;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Asegurar que las columnas no causen overflow */
+[class*="col-"] {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* Optimización para todas las imágenes en diferentes contextos */
+.team-item img,
+.donation-item img,
+.event-item img,
+.service-item img,
+.about-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Asegurar que los contenedores de posición relativa no causen problemas */
+.position-relative {
+    width: 100%;
+}
+
+.position-relative img {
+    width: 100%;
+    height: auto;
 }
 
 .back-to-top {
@@ -342,10 +395,19 @@ a[href="#!"].btn-square:hover {
     position: relative;
     background: url(../img/bg.jpg) center center no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 
 .header-carousel .carousel-img {
     position: relative;
+    overflow: hidden;
+}
+
+.header-carousel .carousel-img img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .header-carousel .owl-nav {
@@ -353,6 +415,7 @@ a[href="#!"].btn-square:hover {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    z-index: 10;
 }
 
 /*** Carousel Navigation ***/
@@ -483,6 +546,135 @@ a[href="#!"].btn-square:hover {
     /* Ajustar contacto en móvil */
     .contact-icon-wrapper {
         justify-content: center !important;
+    }
+}
+
+/* ============================================
+   MEDIA QUERIES ADICIONALES - RESPONSIVE COMPLETO
+   ============================================ */
+
+/* Móvil pequeño (hasta 576px) */
+@media (max-width: 576px) {
+    /* Títulos más pequeños en móviles pequeños */
+    h1.display-3, h1.display-4 {
+        font-size: 1.75rem !important;
+    }
+    
+    h1.display-5 {
+        font-size: 1.5rem !important;
+    }
+    
+    h1.display-6 {
+        font-size: 1.25rem !important;
+    }
+    
+    /* Botones más pequeños */
+    .btn {
+        padding: 8px 16px !important;
+        font-size: 0.875rem !important;
+    }
+    
+    /* Reducir padding en secciones */
+    .container-fluid.py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    /* Ajustar tarjetas de servicios */
+    .service-item {
+        margin-bottom: 1rem;
+    }
+    
+    /* Testimonios */
+    .testimonial-img {
+        padding: 30px 0 30px 15px;
+    }
+    
+    /* Logo más pequeño */
+    .logo-topbar {
+        height: 40px !important;
+    }
+    
+    /* Página header más compacta */
+    .page-header {
+        padding: 2rem 0 !important;
+    }
+    
+    .page-header h1 {
+        font-size: 1.75rem !important;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 769px) and (max-width: 991px) {
+    /* Ajustar columnas en tablet */
+    .col-lg-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    /* Logo tamaño medio */
+    .logo-topbar {
+        height: 60px;
+    }
+    
+    /* Títulos tamaño medio */
+    h1.display-3 {
+        font-size: 2.5rem !important;
+    }
+    
+    h1.display-5 {
+        font-size: 2rem !important;
+    }
+    
+    /* Carrusel ajustado para tablet */
+    .header-carousel .owl-nav {
+        left: 20px;
+    }
+    
+    /* Padding reducido en tablet */
+    .container-fluid.py-5 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+}
+
+/* Desktop grande (min 1200px) */
+@media (min-width: 1200px) {
+    /* Optimizar contenedores para pantallas grandes */
+    .container {
+        max-width: 1140px;
+    }
+    
+    /* Mejor espaciado en desktop */
+    .row.g-5 {
+        --bs-gutter-x: 3rem;
+    }
+}
+
+/* Optimización de imágenes para todos los dispositivos */
+@media (max-width: 1199px) {
+    /* Asegurar que todas las imágenes sean responsive */
+    img, 
+    .img-fluid,
+    .carousel-img img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    /* Contenedores de imágenes */
+    .position-relative {
+        overflow: hidden;
+    }
+    
+    /* Ajustar márgenes en columnas */
+    .row.g-4 {
+        --bs-gutter-x: 1.5rem;
+    }
+    
+    .row.g-5 {
+        --bs-gutter-x: 2rem;
     }
 }
 
