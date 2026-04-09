@@ -449,6 +449,25 @@ a[href="#!"].btn-square:hover {
         font-size: 14px;
     }
     
+    /* Fix para imágenes en móvil - especialmente instalaciones */
+    .container-fluid .container .row.g-4 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .position-relative img.img-fluid {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+    
+    /* Reducir padding en contenedores para mejor visualización de imágenes */
+    .container-fluid.py-5 .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
     h1.display-5 {
         font-size: 2rem !important;
     }
