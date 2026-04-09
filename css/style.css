@@ -8,6 +8,15 @@
     --bg-soft-light: #F5F7FA;
 }
 
+/* Prevenir scroll horizontal en móviles */
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
 .back-to-top {
     position: fixed;
     display: none;
@@ -402,6 +411,11 @@ a[href="#!"].btn-square:hover {
 
 /* Responsive dots */
 @media (max-width: 768px) {
+    /* Ocultar flechas de navegación en móvil */
+    .header-carousel .owl-nav {
+        display: none !important;
+    }
+    
     .header-carousel .owl-dots {
         bottom: 15px;
     }
@@ -413,6 +427,11 @@ a[href="#!"].btn-square:hover {
     
     .header-carousel .owl-dots .owl-dot.active {
         width: 30px;
+    }
+    
+    /* Más espacio arriba en el carrusel para evitar corte de título */
+    .header-carousel .py-5 {
+        padding-top: 3rem !important;
     }
     
     /* Responsive fixes para móvil */
