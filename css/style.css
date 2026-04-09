@@ -591,9 +591,26 @@ a[href="#!"].btn-square:hover {
         height: 50px;
     }
     
-    /* Ajustar contacto en móvil */
-    .contact-icon-wrapper {
+    /* Ajustar contacto en topbar móvil - solo para el header */
+    .top-bar .contact-icon-wrapper {
         justify-content: center !important;
+    }
+    
+    /* Sección Visítanos - mantener alineación izquierda en móvil */
+    .contact-icon-wrapper {
+        justify-content: flex-start !important;
+    }
+    
+    /* Asegurar alineación izquierda en sección de contacto móvil */
+    .col-lg-6 h5,
+    .col-lg-6 h1 {
+        text-align: left !important;
+    }
+    
+    /* Botones en móvil también alineados a la izquierda */
+    .col-lg-6 .btn {
+        width: 100%;
+        text-align: center;
     }
 }
 
