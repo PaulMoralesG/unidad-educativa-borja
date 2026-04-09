@@ -121,6 +121,19 @@
     box-shadow: 0 4px 8px rgba(255, 0, 0, 0.4);
 }
 
+/* Estilos para enlaces de redes sociales sin URL (próximamente) */
+a[href="#!"].btn-square {
+    opacity: 0.5;
+    cursor: not-allowed;
+    position: relative;
+}
+
+a[href="#!"].btn-square:hover {
+    transform: none;
+    box-shadow: none;
+    opacity: 0.5;
+}
+
 /*** Top Bar Contact Icons ***/
 .contact-icon-wrapper {
     transition: all 0.3s ease;
@@ -280,6 +293,15 @@
         margin-top: 20px;
         border-top: 1px solid var(--bs-white);
     }
+    
+    /* Responsive tablets */
+    .top-bar {
+        padding: 20px 40px;
+    }
+    
+    .nav-bar {
+        padding: 0 40px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -391,6 +413,38 @@
     
     .header-carousel .owl-dots .owl-dot.active {
         width: 30px;
+    }
+    
+    /* Responsive fixes para móvil */
+    .top-bar {
+        height: auto;
+        padding: 15px 20px;
+    }
+    
+    .nav-bar {
+        padding: 0 20px;
+    }
+    
+    .btn-golden {
+        padding: 10px 20px !important;
+        font-size: 14px;
+    }
+    
+    h1.display-5 {
+        font-size: 2rem !important;
+    }
+    
+    .carousel-text p {
+        font-size: 1rem !important;
+    }
+    
+    .logo-topbar {
+        height: 50px;
+    }
+    
+    /* Ajustar contacto en móvil */
+    .contact-icon-wrapper {
+        justify-content: center !important;
     }
 }
 
@@ -550,6 +604,8 @@
     position: relative;
 }
 
+/* Pseudo-elementos decorativos desactivados para mostrar imágenes completas */
+/*
 .about-img::before,
 .about-img::after {
     position: absolute;
@@ -568,6 +624,8 @@
     right: 0px;
     bottom: 0px;
 }
+*/
+
 
 
 /*** Service ***/
@@ -882,6 +940,12 @@
 p {
     line-height: 1.7;
     color: #4a5568;
+}
+
+/* Asegurar que los párrafos en secciones con texto blanco sean blancos */
+.text-white p,
+.bg-primary p {
+    color: #ffffff !important;
 }
 
 /* Mejorar separación visual sin líneas fuertes */
