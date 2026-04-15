@@ -532,9 +532,43 @@ a[href="#!"].btn-square:hover {
 
 /* Responsive dots */
 @media (max-width: 768px) {
-    /* Ocultar flechas de navegación en móvil */
+    /* Hacer flechas más grandes y táctiles para móvil */
     .header-carousel .owl-nav {
-        display: none !important;
+        width: 100%;
+        left: 0;
+        right: 0;
+        display: flex !important;
+        justify-content: space-between;
+        padding: 0 10px;
+        pointer-events: none;
+    }
+    
+    .header-carousel .owl-nav .owl-prev,
+    .header-carousel .owl-nav .owl-next {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        margin: 0;
+        background: rgba(255, 107, 53, 0.9);
+        color: var(--bs-white);
+        border-radius: 50%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        pointer-events: auto;
+        transition: all 0.3s ease;
+    }
+    
+    .header-carousel .owl-nav .owl-prev:hover,
+    .header-carousel .owl-nav .owl-next:hover {
+        background: var(--bs-secondary);
+        transform: scale(1.1);
+    }
+    
+    .header-carousel .owl-nav .owl-prev {
+        margin-left: 0;
+    }
+    
+    .header-carousel .owl-nav .owl-next {
+        margin-right: 0;
     }
     
     .header-carousel .owl-dots {
